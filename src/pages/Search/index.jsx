@@ -28,13 +28,13 @@ class Search extends Component {
 
     renderItem(item){
         return (
-            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+            <div className="demo-card-square mdl-card mdl-shadow--2dp" key={item.id}>
                 <div className="mdl-card__supporting-text">
                     { item.title }
                 </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <Link to={ `/product/${item.id}`}>
-                        <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                <div className="mdl-card__actions mdl-card--border">
+                    <Link to={`/product/${item.id}`}>
+                        <button className="mdl-button mdl-js-button mdl-button--raised">
                             Ver Produto
                         </button>
                     </Link>
@@ -55,7 +55,7 @@ class Search extends Component {
                                 id="search" 
                                 onChange={ this.onSearch }
                                 />
-                            <label className="mdl-textfield__label" for="search">O que você procura?</label>
+                            <label className="mdl-textfield__label" htmlFor="search">O que você procura?</label>
                         </div>
                 
                         { this.state.results.map(this.renderItem) }

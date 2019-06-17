@@ -8,7 +8,7 @@ const Routes = () => (
     <Switch>
         <Route 
             exact 
-            path='' 
+            path='/' 
             component={ Search }/>
         
         <Route 
@@ -17,9 +17,7 @@ const Routes = () => (
             component={ Product }/>
         
         <Route 
-            component={ () => ( 
-                <div>Page not found</div>
-            )}/>
+            component={ Search }/>
     </Switch>
 );
 export default Routes;

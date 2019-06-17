@@ -25,7 +25,7 @@ class Product extends Component {
 
             this.setState({
                 data: {
-                    ... item.data,
+                    ...item.data,
                     description: description.data.plain_text,
                 },
                 loading: false,
