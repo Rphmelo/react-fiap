@@ -1,18 +1,8 @@
-.demo-card-wide.mdl-card {
-    width: 80%;
-    margin: 20px;
+.img-product {
+      width: 100%;
   }
-  .demo-card-wide > .mdl-card__title {
-    color: #fff;
-    height: 176px;
-  }
-  .demo-card-wide > .mdl-card__menu {
-    color: #fff;
-  }
-
-  .img-product {
-      width: 100px;
-      height: 100px;
+  .demo-card-wide {
+    width: 100%;
   }
 
   .loading {

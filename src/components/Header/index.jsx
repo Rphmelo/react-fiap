@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './style.css';
-import logo from '../../assets/logo_mercado.png';
+import logo from '../../assets/react_shop_app_logo.png';
 
 const Header = () => (
     <header className="header">
@@ -10,8 +10,6 @@ const Header = () => (
                 <img alt="Logo" src={logo} className="header__logo"/>
             </div>
         </div>
-        
-        
     </header>
 );
 

@@ -1,8 +1,8 @@
     
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-
+import './style.css';
 class Search extends Component {
     constructor(){
         super();
@@ -28,26 +28,40 @@ class Search extends Component {
 
     renderItem(item){
         return (
-            <li key={ item.id }>
-                <span>{ item.id }</span>
-                <span>{ item.title }</span>
-                <Link
-                    to={ `/product/${item.id}`}
-                >
-                    Abrir Produto
-                </Link>
-            </li>
+            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                <div className="mdl-card__supporting-text">
+                    { item.title }
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                    <Link to={ `/product/${item.id}`}>
+                        <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                            Ver Produto
+                        </button>
+                    </Link>
+                </div>
+            </div>
         )
     }
 
     render() {
         return (
-            <div>
-                <input type="text" onChange={ this.onSearch } />
-                <ul>
-                    { this.state.results.map(this.renderItem) }
-                </ul>
-            </div>
+            <Fragment>
+                <div className="mdl-grid container__search">
+                    <div className="mdl-cell mdl-cell--12-col">
+                        <div className="mdl-textfield mdl-js-textfield">
+                            <input 
+                                className="mdl-textfield__input textfield__input__size" 
+                                type="text" 
+                                id="search" 
+                                onChange={ this.onSearch }
+                                />
+                            <label className="mdl-textfield__label" for="search">O que você procura?</label>
+                        </div>
+                
+                        { this.state.results.map(this.renderItem) }
+                    </div>
+                </div>
+            </Fragment>
         );
     }
 }

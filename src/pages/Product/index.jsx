@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import axios from 'axios'
+import axios from 'axios';
 
 import './style.css';
 
@@ -25,7 +25,7 @@ class Product extends Component {
 
             this.setState({
                 data: {
-                    ...item.data,
+                    ... item.data,
                     description: description.data.plain_text,
                 },
                 loading: false,
@@ -38,46 +38,42 @@ class Product extends Component {
     }
 
     render () {
-        const { id, data, loading } = this.state;
+        const { data, loading } = this.state;
+        const {id, title, price, pictures, seller_address} = data;
         if(loading){
             return (
                 <Fragment>
-                    <div className="loading">
-                        <div className="mdl-spinner mdl-js-spinner is-active"></div>
-                        <div >Carregando...</div>
-                    </div>
+                    Carregando...
                 </Fragment>
             );
         } else {
             return (
                 <Fragment>
                     <div className="demo-card-wide mdl-card mdl-shadow--2dp">
-                        <div className="mdl-grid">
-                                <div className="mdl-cell mdl-cell--8-col">
-                                    <img 
-                                        src={data.thumbnail}
-                                        />
-                                </div>
-                                <div className="mdl-cell mdl-cell--4-col">
-                                    <div className="mdl-cell mdl-cell--12-col">
-                                        {data.title}
-                                    </div>
-                                    <div className="mdl-cell mdl-cell--12-col">
-                                        ID: {data.id}
-                                    </div>
-                                    <div className="mdl-cell mdl-cell--12-col">
-                                        Preço: {data.price}
-                                    </div>
-                                    <div className="mdl-cell mdl-cell--12-col">
-                                        Estoque: {data.initial_quantity}
-                                    </div>
-                                    <div className="mdl-cell mdl-cell--12-col">
-                                        {data.warranty}
-                                    </div>
-                        
+                        <div className="mdl-grid" >
+                            <div className="mdl-cell mdl-cell--5-col">
+                                <img className="img-product " src={pictures[0].url } alt={data.title}></img>
                             </div>
-
-                        </div>
+                            <div className="mdl-cell mdl-cell--7-col">
+                                <div>
+                                    <div>
+                                        <h2> {id}</h2>                                
+                                    </div>
+                                    <div>
+                                        <h3 className="mdl-card__title-text">{title}</h3>
+                                    </div>
+                                    <div>
+                                        <h4>R${price}</h4>                                
+                                    </div>
+                                    <div>
+                                        <h4>{seller_address.city.name}</h4>                                
+                                    </div>
+                                    <div>
+                                        <h4> {seller_address.state.name}</h4>                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
                     </div>
                 </Fragment>
             );
