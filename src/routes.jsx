@@ -8,7 +8,7 @@ const Routes = () => (
     <Switch>
         <Route 
             exact 
-            path='/' 
+            path='' 
             component={ Search }/>
         
         <Route 
