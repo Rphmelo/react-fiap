@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-fiap/static/css/main.5691e588.chunk.css",
-    "main.js": "/react-fiap/static/js/main.9d77ac9d.chunk.js",
-    "main.js.map": "/react-fiap/static/js/main.9d77ac9d.chunk.js.map",
-    "runtime~main.js": "/react-fiap/static/js/runtime~main.3a489658.js",
-    "runtime~main.js.map": "/react-fiap/static/js/runtime~main.3a489658.js.map",
-    "static/js/2.99f501d6.chunk.js": "/react-fiap/static/js/2.99f501d6.chunk.js",
-    "static/js/2.99f501d6.chunk.js.map": "/react-fiap/static/js/2.99f501d6.chunk.js.map",
-    "index.html": "/react-fiap/index.html",
-    "precache-manifest.f5d2fcda0469b05de262742e3a94b7bd.js": "/react-fiap/precache-manifest.f5d2fcda0469b05de262742e3a94b7bd.js",
-    "service-worker.js": "/react-fiap/service-worker.js",
-    "static/css/main.5691e588.chunk.css.map": "/react-fiap/static/css/main.5691e588.chunk.css.map",
-    "static/media/react_shop_app_logo.png": "/react-fiap/static/media/react_shop_app_logo.913d00d9.png"
+    "main.css": "/static/css/main.5691e588.chunk.css",
+    "main.js": "/static/js/main.d0946bd2.chunk.js",
+    "main.js.map": "/static/js/main.d0946bd2.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.99f501d6.chunk.js": "/static/js/2.99f501d6.chunk.js",
+    "static/js/2.99f501d6.chunk.js.map": "/static/js/2.99f501d6.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.fc20e5796b3f1c1ff574d1bcd6e6d787.js": "/precache-manifest.fc20e5796b3f1c1ff574d1bcd6e6d787.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.5691e588.chunk.css.map": "/static/css/main.5691e588.chunk.css.map",
+    "static/media/react_shop_app_logo.png": "/static/media/react_shop_app_logo.913d00d9.png"
   }
 }
